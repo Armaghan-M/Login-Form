@@ -1,5 +1,5 @@
 import UserTable from "./UserTable";
-import { User } from "./UserTable";
+
 import React from "react";
 const UserInfo: React.FC = () => {
   return (

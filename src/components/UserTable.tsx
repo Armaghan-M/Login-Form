@@ -38,7 +38,7 @@ const UserTable: React.FC = () => {
       .then((response) => {
         return response.json();
       })
-      .then((data) => setData(data.users.slice(0, 5)))
+      .then((data) => setData(data.users.slice(0, 10)))
       .catch((error) => console.error("Error fetching user data:", error));
   }, []);
 
@@ -49,12 +49,12 @@ const UserTable: React.FC = () => {
   });
   console.log(data);
   return (
-    <table>
+    <table className="table-auto min-w-full shadow-lg bg-blue-300 text-center">
       <tbody>
         {table.getHeaderGroups().map((headerGroup) => (
-          <tr key={headerGroup.id}>
+          <tr key={headerGroup.id} className="border border-b-4 bg-yellow-500">
             {headerGroup.headers.map((header) => (
-              <th key={header.id}>
+              <th key={header.id} className="p-4">
                 {flexRender(
                   header.column.columnDef.header,
                   header.getContext()
@@ -65,9 +65,9 @@ const UserTable: React.FC = () => {
         ))}
 
         {table.getRowModel().rows.map((row) => (
-          <tr key={row.id}>
+          <tr key={row.id} className="border border-b-4">
             {row.getVisibleCells().map((cell) => (
-              <td key={cell.id}>
+              <td key={cell.id} className="p-4">
                 {flexRender(cell.column.columnDef.cell, cell.getContext())}
               </td>
             ))}
