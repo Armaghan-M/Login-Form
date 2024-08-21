@@ -23,10 +23,10 @@ const Login: React.FC = () => {
   });
 
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-100">
+    <div className="flex justify-center items-center h-screen bg-gradient-to-l from-slate-500 to-slate-950">
       <form
         onSubmit={form.handleSubmit}
-        className="bg-white p-8 rounded shadow-md w-full max-w-sm"
+        className=" backdrop-blur bg-gradient-to-r from-fuchsia-100 to-orange-300 p-8 rounded shadow-md w-full max-w-sm"
       >
         <h2 className="text-2xl font-bold mb-6 text-center text-slate-800">
           Login
